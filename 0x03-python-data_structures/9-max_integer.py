@@ -1,7 +1,10 @@
-#!/usr/bin/python3
+!/usr/bin/python3
 def max_integer(my_list=[]):
-    if len(my_list) > 1:
+    length = len(my_list)
+    if length == 0:
         return None
-    list_copy = my_list.copy()
-    list_copy.sort()
-    return list_copy[-1]
+    maxNumber = my_list[0]
+    for idx in range(length):
+        if maxNumber < my_list[idx]:
+            maxNumber = my_list[idx]
+    return maxNumber
